@@ -40989,7 +40989,7 @@
  <service name="BillectaWebServicesService">
   <documentation></documentation>
   <port binding="tns:BillectaWebServicesBinding" name="BillectaWebServices">
-   <soap:address location="https://cs1.salesforce.com/services/Soap/class/BillectaWebServices"/>
+   <soap:address location="https://mercyships--msdev.my.salesforce.com/services/Soap/class/BillectaWebServices"/>
   </port>
  </service>
 </definitions>
