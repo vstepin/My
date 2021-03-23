@@ -133,6 +133,30 @@
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
+   <xsd:element name="getRecurringDonation">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="contractInvoice_ActionPublicId" type="xsd:string" nillable="true"/>
+      <xsd:element name="contractInvoice_RecurrenceDetails_Start" type="xsd:date" nillable="true"/>
+      <xsd:element name="contractInvoice_RecurrenceDetails_End" type="xsd:date" nillable="true"/>
+      <xsd:element name="contractInvoice_RecurrenceDetails_NoEndDate" type="xsd:boolean" nillable="true"/>
+      <xsd:element name="contractInvoice_RecurrenceDetails_MonthlyRecurrence" type="xsd:string" nillable="true"/>
+      <xsd:element name="contractInvoice_RecurrenceDetails_YearlyRecurrence" type="xsd:string" nillable="true"/>
+      <xsd:element name="contractInvoice_RecurrenceDetails_QuarterlyRecurrence" type="xsd:string" nillable="true"/>
+      <xsd:element name="contractInvoice_Records_ArticleDescription" type="xsd:string" nillable="true"/>
+      <xsd:element name="contractInvoice_Records_UnitPrice_ValueForView" type="xsd:decimal" nillable="true"/>
+      <xsd:element name="debtor_DebtorNo" type="tns:ID" nillable="true"/>
+      <xsd:element name="debtor_PaymentServiceSupplier" type="xsd:string" nillable="true"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="getRecurringDonationResponse">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="result" type="tns:ID" nillable="true"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
   </xsd:schema>
  </types>
  <!-- Message for the header parts -->
@@ -150,15 +174,39 @@
  <message name="getContactResponse">
   <part element="tns:getContactResponse" name="parameters"/>
  </message>
+ <message name="getRecurringDonationRequest">
+  <part element="tns:getRecurringDonation" name="parameters"/>
+ </message>
+ <message name="getRecurringDonationResponse">
+  <part element="tns:getRecurringDonationResponse" name="parameters"/>
+ </message>
  <portType name="BillectaWebServicesPortType">
   <operation name="getContact">
    <input message="tns:getContactRequest"/>
    <output message="tns:getContactResponse"/>
   </operation>
+  <operation name="getRecurringDonation">
+   <input message="tns:getRecurringDonationRequest"/>
+   <output message="tns:getRecurringDonationResponse"/>
+  </operation>
  </portType>
  <binding name="BillectaWebServicesBinding" type="tns:BillectaWebServicesPortType">
   <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
   <operation name="getContact">
+   <soap:operation soapAction=""/>
+   <input>
+    <soap:header use="literal" part="SessionHeader" message="tns:Header"/>
+    <soap:header use="literal" part="CallOptions" message="tns:Header"/>
+    <soap:header use="literal" part="DebuggingHeader" message="tns:Header"/>
+    <soap:header use="literal" part="AllowFieldTruncationHeader" message="tns:Header"/>
+    <soap:body use="literal" parts="parameters"/>
+   </input>
+   <output>
+    <soap:header use="literal" part="DebuggingInfo" message="tns:Header"/>
+    <soap:body use="literal"/>
+   </output>
+  </operation>
+  <operation name="getRecurringDonation">
    <soap:operation soapAction=""/>
    <input>
     <soap:header use="literal" part="SessionHeader" message="tns:Header"/>
