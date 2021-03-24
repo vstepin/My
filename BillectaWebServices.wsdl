@@ -144,6 +144,7 @@
       <xsd:element name="contractInvoice_RecurrenceDetails_YearlyRecurrence" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_RecurrenceDetails_QuarterlyRecurrence" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_Records_ArticleDescription" type="xsd:string" nillable="true"/>
+      <xsd:element name="contractInvoice_Records_ArticleNumber" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_Records_UnitPrice_ValueForView" type="xsd:decimal" nillable="true"/>
       <xsd:element name="debtor_DebtorNo" type="tns:ID" nillable="true"/>
       <xsd:element name="debtor_Autogiro_PaymentServiceSupplier" type="xsd:string" nillable="true"/>
