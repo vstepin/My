@@ -139,7 +139,7 @@
       <xsd:element name="contractInvoice_ActionPublicId" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_RecurrenceDetails_Start" type="xsd:date" nillable="true"/>
       <xsd:element name="contractInvoice_RecurrenceDetails_End" type="xsd:date" nillable="true"/>
-      <xsd:element name="contractInvoice_RecurrenceDetails_NoEndDate" type="xsd:boolean" nillable="true"/>
+      <xsd:element name="contractInvoice_RecurrenceDetails_NoEndDate" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_RecurrenceDetails_MonthlyRecurrence" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_RecurrenceDetails_YearlyRecurrence" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_RecurrenceDetails_QuarterlyRecurrence" type="xsd:string" nillable="true"/>
