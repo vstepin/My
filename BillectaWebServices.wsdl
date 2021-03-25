@@ -140,9 +140,7 @@
       <xsd:element name="contractInvoice_RecurrenceDetails_Start" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_RecurrenceDetails_End" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_RecurrenceDetails_NoEndDate" type="xsd:string" nillable="true"/>
-      <xsd:element name="contractInvoice_RecurrenceDetails_MonthlyRecurrence" type="xsd:string" nillable="true"/>
-      <xsd:element name="contractInvoice_RecurrenceDetails_YearlyRecurrence" type="xsd:string" nillable="true"/>
-      <xsd:element name="contractInvoice_RecurrenceDetails_QuarterlyRecurrence" type="xsd:string" nillable="true"/>
+      <xsd:element name="contractInvoice_RecurrenceDetails_RecurrenceInterval" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_Records_ArticleDescription" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_Records_ArticleNumber" type="xsd:string" nillable="true"/>
       <xsd:element name="contractInvoice_Records_UnitPrice_ValueForView" type="xsd:decimal" nillable="true"/>
