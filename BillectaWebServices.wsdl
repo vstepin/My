@@ -112,7 +112,7 @@
      <xsd:element name="longitude" type="xsd:double"/>
     </xsd:sequence>
    </xsd:complexType>
-   <xsd:element name="getContactOrAccount">
+   <xsd:element name="getContact">
     <xsd:complexType>
      <xsd:sequence>
       <xsd:element name="name" type="xsd:string" nillable="true"/>
@@ -126,7 +126,7 @@
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element name="getContactOrAccountResponse">
+   <xsd:element name="getContactResponse">
     <xsd:complexType>
      <xsd:sequence>
       <xsd:element name="result" type="tns:ID" nillable="true"/>
@@ -167,11 +167,11 @@
   <part name="SessionHeader" element="tns:SessionHeader"/>
  </message>
  <!-- Operation Messages -->
- <message name="getContactOrAccountRequest">
-  <part element="tns:getContactOrAccount" name="parameters"/>
+ <message name="getContactRequest">
+  <part element="tns:getContact" name="parameters"/>
  </message>
- <message name="getContactOrAccountResponse">
-  <part element="tns:getContactOrAccountResponse" name="parameters"/>
+ <message name="getContactResponse">
+  <part element="tns:getContactResponse" name="parameters"/>
  </message>
  <message name="getRecurringDonationRequest">
   <part element="tns:getRecurringDonation" name="parameters"/>
@@ -180,9 +180,9 @@
   <part element="tns:getRecurringDonationResponse" name="parameters"/>
  </message>
  <portType name="BillectaWebServicesPortType">
-  <operation name="getContactOrAccount">
-   <input message="tns:getContactOrAccountRequest"/>
-   <output message="tns:getContactOrAccountResponse"/>
+  <operation name="getContact">
+   <input message="tns:getContactRequest"/>
+   <output message="tns:getContactResponse"/>
   </operation>
   <operation name="getRecurringDonation">
    <input message="tns:getRecurringDonationRequest"/>
@@ -191,7 +191,7 @@
  </portType>
  <binding name="BillectaWebServicesBinding" type="tns:BillectaWebServicesPortType">
   <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-  <operation name="getContactOrAccount">
+  <operation name="getContact">
    <soap:operation soapAction=""/>
    <input>
     <soap:header use="literal" part="SessionHeader" message="tns:Header"/>
