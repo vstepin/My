@@ -120,6 +120,7 @@
       <xsd:element name="email" type="xsd:string" nillable="true"/>
       <xsd:element name="phone" type="xsd:string" nillable="true"/>
       <xsd:element name="address" type="xsd:string" nillable="true"/>
+      <xsd:element name="address2" type="xsd:string" nillable="true"/>
       <xsd:element name="zipCode" type="xsd:string" nillable="true"/>
       <xsd:element name="city" type="xsd:string" nillable="true"/>
       <xsd:element name="debtorType" type="xsd:string" nillable="true"/>
