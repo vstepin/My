@@ -140,7 +140,7 @@
       <xsd:element name="invoice_ActionPublicId" type="xsd:string" nillable="true"/>
       <xsd:element name="invoice_Invoices_InvoiceNumber" type="xsd:string" nillable="true"/>
       <xsd:element name="invoice_ContractInvoiceActionPublicId" type="xsd:string" nillable="true"/>
-      <xsd:element name="invoice_DueDate" type="xsd:string" nillable="true"/>
+      <xsd:element name="invoice_Events_PaidDate" type="xsd:string" nillable="true"/>
       <xsd:element name="invoice_Invoices_InvoicedAmount_ValueForView" type="xsd:decimal" nillable="true"/>
       <xsd:element name="invoice_Debtor_DebtorNo" type="tns:ID" nillable="true"/>
       <xsd:element name="invoice_Debtor_DebtorType" type="xsd:string" nillable="true"/>
